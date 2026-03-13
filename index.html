@@ -215,7 +215,7 @@ footer{
 footer p{
   opacity:0.7;
   font-family: fantasy;
-  
+
 }
 
 /* -----------------------------
@@ -235,7 +235,8 @@ MOBILE
   display:flex;
   justify-content:center;
   margin:20px;
-  position: relative;
+  position: center;
+  background-position: center;
 }
 
 .search-box input{
@@ -273,12 +274,40 @@ MOBILE
 </div>
 
 <!-- REKLAMLAR -->
-<div class="leftAd">
-  <img src="https://dummyimage.com/160x600/000/fff">
+<!-- SOL SABİT REKLAM -->
+<div class="left-ad">
+  <iframe src="https://www.effectivegatecpm.com/dvwibkt2?key=397cb277460893670ee88c5b3ece364e" 
+          width="160" height="600" 
+          style="border:none;overflow:hidden;">
+  </iframe>
 </div>
-<div class="rightAd">
-  <img src="https://dummyimage.com/160x600/000/fff">
+
+<!-- SAĞ SABİT REKLAM -->
+<div class="right-ad">
+  <iframe src="https://www.effectivegatecpm.com/dvwibkt2?key=397cb277460893670ee88c5b3ece364e" 
+          width="160" height="600" 
+          style="border:none;overflow:hidden;">
+  </iframe>
 </div>
+<style>
+  /* SOL REKLAM */
+.left-ad{
+position:fixed;
+left:10px;
+top:50%;
+transform:translateY(-50%);
+z-index:999;
+}
+
+/* SAĞ REKLAM */
+.right-ad{
+position:fixed;
+right:10px;
+top:50%;
+transform:translateY(-50%);
+z-index:999;
+}
+</style>
 
 <!-- NAVBAR -->
 <nav>
@@ -325,7 +354,6 @@ MOBILE
 <p>En popüler programlardan biri.</p>
 <button class="downloadBtn" onclick="download(1)">Download</button>
 </div>
-
 <div class="card">
 <img src="https://dummyimage.com/400x250/22c55e/000">
 <h3>Program 2</h3>
@@ -345,6 +373,13 @@ MOBILE
 <h3>Program 4</h3>
 <p>Yeni sürüm.</p>
 <button class="downloadBtn" onclick="download(4)">Download</button>
+</div>
+
+<div class="card">
+<img src="https://dummyimage.com/400x250/22c55e/000">
+<h3>Program 5</h3>
+<p>En popüler programlardan biri.</p>
+<button class="downloadBtn" onclick="download(5)">Download</button>
 </div>
 
 </div>
