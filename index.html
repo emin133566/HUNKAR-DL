@@ -1,368 +1,3 @@
-
-</html>
-<!DOCTYPE html>
-<html lang="tr">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
-
-
-<style>
-
-/* -----------------------------
-GENEL AYARLAR
------------------------------ */
-
-*{
-  margin:0;
-  padding:0;
-  box-sizing: border-box;
-  font-family:fantasy;
-  font-size: 30px;
-}
-
-body{
-  background:#141b2b;
-  color:white;
-  scroll-behavior:smooth;
-}
-
-/* -----------------------------
-NAVBAR
------------------------------ */
-nav{
-  position:fixed;
-  top:0;
-  width:100%;
-  background:#020617;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:15px 50px;
-  z-index:1000;
-  box-shadow:0 0 8px rgb(255, 255, 255);
-}
-.logo{
-  font-size:40px;
-  font-weight:10px;
-  color:#33ff00;
-  text-shadow: 0 0 30px white;
-
-}
-nav ul{
-  display:flex;
-  list-style:none;
-  color: rgb(0, 0, 0);
-}
-nav ul li{
-  margin-left:30px;
-}
-nav ul li a{
-  text-decoration:none;
-  color:rgba(201, 201, 201, 0.671);
-  transition:0.3s;
-}
-nav ul li a:hover{
-  color:#ffffff;
-}
-
-/* -----------------------------
-HERO
------------------------------ */
-.hero{
-  height:100vh;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  padding-bottom: 400px;
-  position: center;
-}
-.hero h1{
-  position: relative;
-  font-size:70px;
-  margin-bottom:20px;
-  color:#ffffff;
-  text-shadow:0 0 20px #000000;
-  background-color: #1e293b;
-  height: 90px;
-  width: 450px;
-  border: 5px #000000;
-  border-radius: 10px;
-  text-align: center;
-  box-shadow:0 0 20px #f7f7f7;
-  margin: 40px;
-  
-}
-
-.hero p{
-  font-size:39px;
-  opacity:0.8;
-  margin-bottom: 10px;
-}
-.scrollBtn{
-  margin-top:40px;
-  margin: 10px;
-  padding:15px 35px;
-  border:none;
-  border-radius:8px;
-  background:#00ff5e;
-  font-size:18px;
-  cursor:pointer;
-  box-shadow:0 0 20px rgb(255, 255, 255) ;
-}
-
-.scrollBtn:hover{
-box-shadow:0 0 20px rgb(0, 255, 115);
-
-
-
-}
-/* -----------------------------
-DOWNLOAD SECTION
------------------------------ */
-.download-section{
-  padding:10px 10%;
-}
-.section-title{
-  font-size:40px;
-  margin-bottom:60px;
-  text-align:center;
-  background-color: rgb(126, 126, 126);
-}
-
-/* grid */
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:60px;
-}
-
-/* card */
-.card{
-  background:#352d2d;
-  border-radius:15px;
-  padding:20px;
-  transition:0.4s;
-  box-shadow:0 0 20px rgb(0, 0, 0);
-  width: 330px;
-  
-}
-
-.card iframe{
-  width: 290px;
-  margin-bottom: 55px;
-}
-
-.card:hover{
-  transform:translateY(-10px);
-  box-shadow:0 10px 30px rgb(255, 255, 255) (190, 15, 15, 0.5)
-}
-
-.card h3{
-  margin-bottom:10px;
-  font-family: Arial, Helvetica, sans-serif;
-} 
-.card p{
-  font-size:25px;
-  opacity:0.7;
-}
-
-.card button{
-  background-color: rgb(0, 255, 0);
-  border-radius: 12px;
-  font-family: fantasy;
-  width: 290px;
-  height: 60px ;
-}
-
-/* -----------------------------
-REKLAMLAR
------------------------------ */
-
-.right-Ad{
-  position:fixed;
-  right:10px;
-  top:150px;
-  width:160px;
-  box-shadow:0 0 20px #000000;
-  padding: 5px;
-  border-radius: 10px;
-}
-.left-Ad {
-  position:fixed;
-  left:10px;
-  top:150px;
-  width:160px;
-  box-shadow:0 0 20px #000000;
-  padding: 5px;
-  border-radius: 10px;
-}
-
-/* -----------------------------
-FOOTER
------------------------------ */
-footer{
-  margin-left: 100px;
-  margin-right: 100px;
-  margin-bottom: 30px;
-  background:#474545;
-  padding:10px;
-  text-align:center;
-  margin-top:100px;
-  border-radius: 25px;
-  border: #ffffff;
-  box-shadow: 0 0 20px #afafaf;
-}
-
-
-footer p{
-  opacity:0.7;
-  font-family: fantasy;
-
-}
-
-/* -----------------------------
-MOBILE
------------------------------ */
-@media(max-width:1000px){
-  .leftAd,
-  .rightAd{
-    display:none;
-  }
-  .hero h1{
-    font-size:45px;
-  }
-}
-.search-box{
-  width:100%;
-  display:flex;
-  justify-content:center;
-  margin:20px;
-  position: center;
-  background-position: center;
-}
-
-.search-box input{
-  width:400px;
-  padding:12px 20px;
-  border-radius:25px;
-  border:none;
-  font-size:16px;
-  background:#ffffff;
-  color:rgb(0, 0, 0);
-  outline:none;
- position: center;
- overflow: 1000px;
- margin: 60px;
- width: 300;
- display: flex;
- font-family: fantasy;
-}
-
-.search-box input:focus{
-  box-shadow:0 0 30px #22c55e;
-  width: 1000;
-  
-}
-</style>
-</head>
-
-<body>
-
-<div class="card">
-  
-</div>
-
-<div class="search-box">
-  <input type="text" id="searchInput" placeholder=" search...">
-</div>
-
-
-<!-- REKLAMLAR -->
-<!-- SOL SABİT REKLAM -->
-<div class="right-ad">
-  <iframe src="https://www.effectivegatecpm.com/dvwibkt2?key=397cb277460893670ee88c5b3ece364e" 
-          width="160" height="600" 
-          style="border:none;overflow:hidden;">
-  </iframe>
-</div>
-  <!-- addsterra banner -->
-
-<!-- SAĞ SABİT REKLAM -->
-<div class="left-ad">
-  <iframe src="https://www.effectivegatecpm.com/dvwibkt2?key=397cb277460893670ee88c5b3ece364e" 
-          width="160" height="600" 
-          style="border:none;overflow:hidden;">
-  </iframe>
-</div>
-<style>
-/* SAĞ REKLAM*/
-.left-Ad{
-position:fixed;
-left:10px;
-top:50%;
-transform:translateY(-50%);
-z-index:999;
-}
-
-   /* SOL REKLAM */*/
-.right-ad{
-position:fixed;
-right:10px;
-top:50%;
-transform:translateY(-50%);
-z-index:999;
-}
-</style>
-
-<!-- NAVBAR -->
-<nav>
-  <div class="logo">7BEATS</div>
-  <ul>
-    </style></li>
-    <li><a href="#">MAİN</a></li>
-    <li><a href="#downloads">SONGS</a></li>
-    <li><a href="#footer">CONTACT</a></li>
-  </ul>
-</nav>
-
-<!-- HERO -->
-<section class="hero">
-  <h1>7BEATS</h1>
-  <p>WELCOME TO MY SİTE</p>
-  <a href="#downloads">
-    <button class="scrollBtn">GO TO SONGS</button>
-  </a>
-  <style>
-
-  </style>
-</section>
-
-<!-- DOWNLOAD -->
-<section id="SONGS" class="download-section">
-<h2 class="section-title">SONGS</h2>
-<style>
-  h2{
-    font-family: fantasy;
-    background-color: #1e293b;
-    position: relative;
-    border-radius: 15px;
-    width: 1460px;
-    text-align: left;
-  }
-  
-</style>
-<div class="grid">
-
-<!--CARDLAR-->
-<style>
-  p{
-    font-family: Arial, Helvetica, sans-serif;
-  }
-</style>
 <div class="card">
 <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/748mdHapucXQri7IAO8yFK?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 <h3>doja cat</h3>
@@ -390,13 +25,13 @@ allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen
 <div class="card">
 <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/6FfLg6FFqhCsrFOaHIGkg0?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 <h3>JAWNY</h3>
-<p>Honeypie</p>
+<p>Honeypie-</p>
 <a href="https://www.tiktok.com/@7_beatt1?is_from_webapp=1&sender_device=pc"><button class="downloadBtn">7BEATS</button></a>
 </div>
 
 <div class="card">
 <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/2HoqbEOXgbDSLZ5XCePEXt?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe><h3>Ray charles</h3>
-<p>Hit the road jack</p>
+<p>Hit the road jack-</p>
 <a href="https://www.tiktok.com/@7_beatt1?is_from_webapp=1&sender_device=pc"><button class="downloadBtn">7BEATS</button></a>
 </div>
 
@@ -405,7 +40,19 @@ allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen
 src="https://open.spotify.com/embed/track/65iyI1iybyv5ecsfBHSdUf?utm_source=generator" 
 width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
 loading="lazy"></iframe> 
-<h3>Westside...</h3><p>gangasta natinon</p>
+<h3>Westside...</h3><p>gangasta natinon-</p>
+<a href="https://www.tiktok.com/@7_beatt1?is_from_webapp=1&sender_device=pc"><button class="downloadBtn">7BEATS</button></a>
+</div>
+
+<div class="card">
+<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/5KBARWIxeMGkvUax9VtVC9?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<h3>Saweetie</h3><p>My type-</p>
+<a href="https://www.tiktok.com/@7_beatt1?is_from_webapp=1&sender_device=pc"><button class="downloadBtn">7BEATS</button></a>
+</div>
+
+<div class="card">
+<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/7eJMfftS33KTjuF7lTsMCx?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<h3>Death bed</h3><p>Powfu-</p>
 <a href="https://www.tiktok.com/@7_beatt1?is_from_webapp=1&sender_device=pc"><button class="downloadBtn">7BEATS</button></a>
 </div>
 
@@ -415,18 +62,6 @@ loading="lazy"></iframe>
 <a href="https://www.tiktok.com/@7_beatt1?is_from_webapp=1&sender_device=pc"><button class="downloadBtn">7BEATS</button></a>
 </div>
 
-<div class="card">
-<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/5KBARWIxeMGkvUax9VtVC9?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-<h3>Saweetie</h3><p>My type</p>
-<a href="https://www.tiktok.com/@7_beatt1?is_from_webapp=1&sender_device=pc"><button class="downloadBtn">7BEATS</button></a>
-</div>
-
-
-<div class="card">
-<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/7eJMfftS33KTjuF7lTsMCx?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-<h3>Death bed</h3><p>Powfu</p>
-<a href="https://www.tiktok.com/@7_beatt1?is_from_webapp=1&sender_device=pc"><button class="downloadBtn">7BEATS</button></a>
-</div>
 
 <div class="card">
 <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/7uoFMmxln0GPXQ0AcCBXRq?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
@@ -435,7 +70,7 @@ loading="lazy"></iframe>
 </div>
 
 <div class="card">
-<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/53FhswemY3bkUOAZRi7Lpo?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe><h3>Honey see you</h3><p>ISTERIF</p>
+<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/53FhswemY3bkUOAZRi7Lpo?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe><h3>Honey see you</h3><p>ISTERIF-</p>
 <a href="https://www.tiktok.com/@7_beatt1?is_from_webapp=1&sender_device=pc"><button class="downloadBtn">7BEATS</button></a>
 </div>
 
@@ -459,7 +94,7 @@ loading="lazy"></iframe>
 
 <div class="card">
 <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/6AQbmUe0Qwf5PZnt4HmTXv?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-<h3>Boy's a liar pt2</h3><p>ice spice</p>
+<h3>Boy's a liar pt2</h3><p>ice spice-</p>
 <a href="https://www.tiktok.com/@7_beatt1?is_from_webapp=1&sender_device=pc"><button class="downloadBtn">7BEATS</button></a>
 </div>
 
@@ -511,195 +146,8 @@ loading="lazy"></iframe>
 <a href="https://www.tiktok.com/@7_beatt1?is_from_webapp=1&sender_device=pc"><button class="downloadBtn">7BEATS</button></a>
 </div>
    
-</section>
-
-<footer id="footer">
-<a href="https://www.tiktok.com/@7_beatt1?is_from_webapp=1&sender_device=pc"> <img src="sdrh.jfif" alt=""></a>
-<p>7BEATS FOLLOW FOR MORE</p> 
-<style>
- 
-  img{
-    width: 100px;
-    border-radius: 125px;
-  }
-</style>
-
-</footer>
-
-
-<script>
-function SPOTİFY (id){
-alert("coming soon: "+id);
-}
-</script>
-</body>
-</html>
-<!-- PARTİCLE ARKA PLAN -->
-<canvas id="particles"></canvas>
-
-<style>
-/* PARTICLE CANVAS */
-#particles{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  z-index:-1;
-}
-
-/* NEON ANİMASYONLU BAŞLIK */
-.hero h1{
-  animation: neonBlink 1.5s infinite alternate;
-}
-@keyframes neonBlink{
-  0%{ text-shadow:0 0 5px #000000, 0 0 10px #000000,0 0 20px #000000; }
-  50%{ text-shadow:0 0 10px #22c55e, 0 0 20px #22c55e,0 0 30px #22c55e; }
-  100%{ text-shadow:0 0 15px #22c55e,0 0 25px #22c55e,0 0 40px #22c55e; }
-}
-
-
-
-</style>
-
-<script>
-// -----------------------------
-// PARTICLE ARKA PLAN
-// -----------------------------
-const canvas = document.getElementById("particles");
-const ctx = canvas.getContext("2d");
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-let particles = [];
-for(let i=0;i<150;i++){
-  particles.push({
-    x:Math.random()*canvas.width,
-    y:Math.random()*canvas.height,
-    size:Math.random()*2+1,
-    speed:Math.random()*1+0.2
-  });
-}
-function drawParticles(){
-  ctx.clearRect(0,0,canvas.width,canvas.height);
-  ctx.fillStyle="white";
-  for(let p of particles){
-    ctx.beginPath();
-    ctx.arc(p.x,p.y,p.size,0,Math.PI*2);
-    ctx.fill();
-    p.y += p.speed;
-    if(p.y>canvas.height){p.y=0; p.x=Math.random()*canvas.width;}
-  }
-  requestAnimationFrame(drawParticles);
-}
-drawParticles();
-
-// -----------------------------
-// DİNAMİK DOWNLOAD KARTLARI EKLEME
-// -----------------------------
-const grid = document.querySelector(".grid");
-for(let i=5;i<=7;i++){
-  const card = document.createElement("div");
-  card.className="card";
-  card.innerHTML = `<img src="data:image/png;base64,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">
-  <h3>NEW SONG ${i}</h3>
-  <p>COMİNG SOON .</p>
-  <button class="downloadBtn" onclick="download(${i})">FOLLOW FOR MORE</button>`;
-  grid.appendChild(card);
-}
-</script>
-<style>
-/* -----------------------------
-HOVER EFECTLERİ VE BUTONLAR
------------------------------ */
-.card:hover{
-  transform:translateY(-15px);
-  box-shadow:0 15px 40px rgba(255, 255, 255, 0.7);
-}
-.downloadBtn:hover{
-  background:#000000;
-  color:white;
-  transform:scale(1.05);
-  transition:0.2s;
-}
-
-/* -----------------------------
-RESPONSIVE GRID
------------------------------ */
-@media(max-width:1200px){
-  .grid{
-    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-    gap:25px;
-  }
-}
-@media(max-width:768px){
-  .hero h1{
-    font-size:40px;
-  }
-  .scrollBtn{
-    font-size:16px;
-    padding:12px 25px;
-  }
-}
-
-
-
-/* -----------------------------
-SMOOTH SCROLL OPTİMİZASYONU
------------------------------ */
-html{
-  scroll-behavior:smooth;
-}
-.card{
-  opacity:60;
-  transform:translateY(50px);
-  transition:0.6s ease;
-}
-.card.visible{
-  opacity:1;
-  transform:translateY(0);
-}
-</style>
-
-<script>
-    const observer = new IntersectionObserver(entries=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting) entry.target.classList.add("visible");
-  });
-}, {threshold:0.1});
-
-document.querySelectorAll(".card").forEach(card=>{
-  observer.observe(card);
-});
-// -----------------------------
-// SMOOTH SCROLL (NAVBAR LINKLERİ)
-document.querySelectorAll("nav ul li a").forEach(anchor=>{
-  anchor.addEventListener("click", function(e){
-    e.preventDefault();
-    const target=document.querySelector(this.getAttribute("href"));
-    if(target){
-      target.scrollIntoView({behavior:"smooth"});
-    }
-  });
-});
-
-// -----------------------------
-// YENİ DOWNLOAD BUTONLARI DİNAMİK
-for(let i=2;i<=0;i++){
-  const card = document.createElement("div");
-  card.className="card";
-  card.innerHTML = `<img src="data:image/png;base64,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">
-  <h3>COMİNG SOON ${i}</h3>
-  <p>NEW SONGS ${i}.</p>
-  <button class="downloadBtn" onclick="download(${i})">Download</button>`;
-  document.querySelector(".grid").appendChild(card);
-}
-
-// -----------------------------
-// RESIZE EVENT (CANVAS)
-window.addEventListener("resize", ()=>{
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-});
-
-</script>
-
+<div class="card">
+<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/7yq4Qj7cqayVTp3FF9CWbm?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<h3>Riptide</h3><p>Vance joy</p>
+<a href="https://www.tiktok.com/@7_beatt1?is_from_webapp=1&sender_device=pc"><button class="downloadBtn">7BEATS</button></a>
+</div>
